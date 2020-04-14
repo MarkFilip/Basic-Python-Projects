@@ -5,6 +5,8 @@ fileList = ('information.docx','Hello.txt','myImage.png', \
 
 conn = sqlite3.connect('test.db')
 
+# Create Table with a primary key and a file name column
+
 with conn:
     cur = conn.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS tbl_files ( \
@@ -13,6 +15,9 @@ with conn:
         )")
     conn.commit()
 conn.close
+
+# Create a list with all the txt files from file_List
+# then pass those values to the database
 
 with conn:
     cur = conn.cursor()
@@ -25,6 +30,9 @@ with conn:
                         [t]) 
     conn.commit()
 conn.close
+
+# Query those file names from the database and print
+# them
 
 with conn:
     cur = conn.cursor()
