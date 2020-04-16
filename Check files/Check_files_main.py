@@ -1,8 +1,10 @@
 from tkinter import *
+from tkinter import filedialog
 import tkinter as tk
 
-# Import other module
+# Import other modules
 import Check_files_gui
+import Check_files_func
 
 
 
